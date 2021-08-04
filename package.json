@@ -19,6 +19,7 @@
     "build": "webpack"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^9.0.1",
     "dotenv": "^10.0.0",
     "fs-extra": "^10.0.0",
     "webpack": "^5.48.0",
