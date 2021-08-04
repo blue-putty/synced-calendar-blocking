@@ -19,5 +19,17 @@ function modify(buffer) {
 
 module.exports = merge(common, {
     mode: 'development',
-    devtool: 'inline-source-map',
+    plugins: [
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: "./src/manifest.json",
+                    to: "manifest.json",
+                    transform(content, path) {
+                        return modify(content)
+                    }
+                }
+            ]
+        })
+    ]
 })

@@ -1,3 +1,8 @@
+require('./js/rules.js')
+require('./js/tabHandler.js')
+require('./js/sync.js')
+require('./js/actions.js')
+
 chrome.alarms.onAlarm.addListener(function (alarm) {
     switch (alarm.name) {
         case 'sync':
@@ -28,12 +33,6 @@ chrome.tabs.onCreated.addListener((tab)=>{
         }
     });
 })
-
-try {
-    importScripts('./js/rules.js', './js/tabHandler.js', './js/sync.js', './js/actions.js');
-} catch (e) {
-    console.error(e);
-}
 
 chrome.contextMenus.onClicked.addListener(popoutContextHandler);
 
