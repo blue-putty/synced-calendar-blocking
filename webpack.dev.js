@@ -19,6 +19,9 @@ function modify(buffer) {
 
 module.exports = merge(common, {
     mode: 'development',
+    entry: {
+        serviceWorker: ['./src/serviceWorker.js', './scripts/liveReload.js'],
+    },
     plugins: [
         new CopyPlugin({
             patterns: [
