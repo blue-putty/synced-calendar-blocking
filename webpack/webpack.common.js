@@ -5,14 +5,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: {
         index: './src/js/popup.js',
-        serviceWorker: './src/serviceWorker.js',
-    },
+            serviceWorker: './src/serviceWorker.js',
+        },
     devtool: 'inline-source-map',
-    output: {
-        path: path.resolve(__dirname, './dist'),
-        filename: '[name].js',
-        clean: true,
-    },
+        output: {
+        path: path.resolve(__dirname, '../dist'),
+            filename: '[name].js',
+                clean: true,
+        },
     plugins: [
         new CopyPlugin({
             patterns: [

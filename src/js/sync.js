@@ -1,6 +1,10 @@
 import Rules from './rules.js';
+const browserType = __BROWSER__;
+import browser from `${browserType}Identity.js`;
+import(`${browserType}Identity.js`);
 
 function syncHandler() {
+    
     chrome.identity.getAuthToken({ interactive: true }, (token) => parseData(token));
 
     const parseData = async (token) => {

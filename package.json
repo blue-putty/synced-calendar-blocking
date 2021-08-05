@@ -15,10 +15,15 @@
   "author": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --watch --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "chrome:dev": "webpack --watch --config ./webpack/chrome/webpack.dev.js",
+    "chrome:build": "webpack --config ./webpack/chrome/webpack.prod.js",
+    "firefox:dev": "webpack --watch --config ./webpack/firefox/webpack.dev.js",
+    "firefox:build": "webpack --config ./webpack/firefox/webpack.prod.js"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "babel-loader": "^8.2.2",
     "copy-webpack-plugin": "^9.0.1",
     "dotenv": "^10.0.0",
     "fs-extra": "^10.0.0",
@@ -26,5 +31,8 @@
     "webpack": "^5.48.0",
     "webpack-cli": "^4.7.2",
     "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
   }
 }
