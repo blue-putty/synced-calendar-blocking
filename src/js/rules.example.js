@@ -5,12 +5,7 @@ const rules = [
     {
         title: "streaming",
         sites: [
-            "nbc.com/chicago-pd",
-            "cbs.com/shows",
-            "cbs.com/tv",
-            "netflix.com",
-            "hulu.com",
-            "kissasian.la"
+            "netflix.com"
         ]
     },
     {

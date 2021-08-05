@@ -1,3 +1,5 @@
+import Rules from './rules.js';
+
 function syncHandler() {
     chrome.identity.getAuthToken({ interactive: true }, (token) => parseData(token));
 
@@ -19,19 +21,19 @@ function syncHandler() {
 
 
             if (typeof mode === "undefined") {
-                chrome.storage.local.set({ 'mode': rules })
+                chrome.storage.local.set({ 'mode': Rules.rules })
                 return;
             }
 
             let stop = false;
             //match each event to a rule
-            let update = rules.map((x) => x);
+            let update = Rules.rules.map((x) => x);
 
             concurrent.forEach(event => {
                 const eventTitle = event.summary;
 
-                for (let i = 0; i < rulesLookup.length; i++) {
-                    const eventMatch = rulesLookup[i];
+                for (let i = 0; i < Rules.rulesLookup.length; i++) {
+                    const eventMatch = Rules.rulesLookup[i];
                     if (eventTitle === eventMatch.title) {
                         console.log('disabled');
                         eventMatch.disable.forEach(rule => {
@@ -116,3 +118,5 @@ function syncHandler() {
         }
     }
 }
+
+export default { syncHandler };

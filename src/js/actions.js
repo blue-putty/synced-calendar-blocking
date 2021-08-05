@@ -8,7 +8,9 @@ function popout(tab) {
         },
         () => { });
     function action() {
-        window.open(location.href, "detab", "toolbar=0"); 
+        window.open(location.href, "detab", "toolbar=0");
         window.close();
     }
 }
+
+export default { popout };

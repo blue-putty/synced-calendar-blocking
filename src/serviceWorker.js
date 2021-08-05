@@ -1,12 +1,11 @@
-require('./js/rules.js')
-require('./js/tabHandler.js')
-require('./js/sync.js')
-require('./js/actions.js')
+import TabHandler from './js/TabHandler';
+import syncHandler from './js/sync';
+
 
 chrome.alarms.onAlarm.addListener(function (alarm) {
     switch (alarm.name) {
         case 'sync':
-            syncHandler();
+            syncHandler.syncHandler();
             break;
         case 'stop':
 
@@ -21,7 +20,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     }
 
     chrome.storage.local.get('mode', (result) => {
-        tabHandler(tabId, url, result.mode);
+        TabHandler.handler(tabId, url, result.mode);
     });
 });
 

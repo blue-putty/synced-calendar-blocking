@@ -1,8 +1,10 @@
 const path = require('path');
-const CopyPlugin = require('copy-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
+        index: './src/js/popup.js',
         serviceWorker: './src/serviceWorker.js',
     },
     devtool: 'inline-source-map',
