@@ -50,11 +50,8 @@ function block(tabId, mode) {
             console.log('bruh');
             chrome.tabs.remove(tabId);
             break;
-        case 'college':
-            chrome.tabs.update(tabId, { url: 'https://www.cmu.edu/' });
-            break;
-        case 'rickRoll':
-            chrome.tabs.update(tabId, { url: 'https://www.youtube.com/embed/dQw4w9WgXcQ' });
+        case 'custom':
+            chrome.tabs.update(tabId, { url: '' });
             break;
         default:
             console.log(tabId);

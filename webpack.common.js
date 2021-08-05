@@ -17,6 +17,14 @@ module.exports = {
                 {
                     from: "./src/64.png",
                     to: "64.png"
+                },
+                {
+                    from: "./src/popup.html",
+                    to: "popup.html"
+                },
+                {
+                    from: "./src/css/popup.css",
+                    to: "css/popup.css"
                 }
             ]
         })
