@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "Blue Putty",
+    "version": "0.0.1",
+    "permissions": [
+        "identity",
+        "alarms",
+        "storage",
+        "tabs",
+        "contextMenus",
+        "scripting"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "action": {
+        "default_icon": {
+            "64": "64.png"
+        },
+        "default_popup": "popup.html"
+    },
+    "oauth2": {
+        "scopes": [
+            "https://www.googleapis.com/auth/calendar.events.readonly"
+        ]
+    },
+    "background": {
+        "service_worker": "serviceWorker.js"
+    },
+    "icons": {
+        "64": "64.png"
+    }
+}
