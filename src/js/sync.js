@@ -1,6 +1,6 @@
 import Rules from './rules.js';
-const browserType = __BROWSER__;
-import browser from `${browserType}Identity.js`;
+// const browserType = __BROWSER__;
+// import browser from `${browserType}Identity.js`;
 import(`${browserType}Identity.js`);
 
 function syncHandler() {
