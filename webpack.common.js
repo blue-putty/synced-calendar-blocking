@@ -1,35 +1,26 @@
-const path = require('path');
-const CopyPlugin = require('copy-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const CopyPlugin = require("copy-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    index: './src/js/popup.js',
+    // index: "./src/js/popup.js",
   },
-  devtool: 'inline-source-map',
+  devtool: "inline-source-map",
   output: {
-    path: path.resolve(__dirname, '../dist'),
-    filename: '[name].js',
+    path: path.resolve(__dirname, "./dist"),
+    filename: "[name].js",
     clean: true,
   },
   plugins: [
     new CopyPlugin({
       patterns: [
         {
-          from: './src/64.png',
-          to: '64.png',
-        },
-        {
-          from: './src/popup.html',
-          to: 'popup.html',
-        },
-        {
-          from: './src/js/',
-          to: '/js/',
-        },
-        {
-          from: './src/css/popup.css',
-          to: 'css/popup.css',
+          from: "./src",
+          to: "./",
+          globOptions: {
+            ignore: ["**/manifest.json"],
+          },
         },
       ],
     }),
