@@ -15,8 +15,8 @@
   "author": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --watch --config ./webpack/chrome/webpack.dev.js",
-    "build": "webpack --config ./webpack/chrome/webpack.prod.js"
+    "dev": "webpack --watch --config ./webpack.dev.js",
+    "build": "webpack --config ./webpack.prod.js"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
