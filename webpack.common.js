@@ -5,7 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     index: './src/js/popup.js',
-    serviceWorker: './src/serviceWorker.js',
   },
   devtool: 'inline-source-map',
   output: {
@@ -23,6 +22,10 @@ module.exports = {
         {
           from: './src/popup.html',
           to: 'popup.html',
+        },
+        {
+          from: './src/js/',
+          to: '/js/',
         },
         {
           from: './src/css/popup.css',
