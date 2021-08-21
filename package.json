@@ -15,10 +15,8 @@
   "author": "",
   "main": "index.js",
   "scripts": {
-    "chrome:dev": "webpack --watch --config ./webpack/chrome/webpack.dev.js",
-    "chrome:build": "webpack --config ./webpack/chrome/webpack.prod.js",
-    "firefox:dev": "webpack --watch --config ./webpack/firefox/webpack.dev.js",
-    "firefox:build": "webpack --config ./webpack/firefox/webpack.prod.js"
+    "dev": "webpack --watch --config ./webpack/chrome/webpack.dev.js",
+    "build": "webpack --config ./webpack/chrome/webpack.prod.js"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
